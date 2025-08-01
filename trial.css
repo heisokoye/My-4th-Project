@@ -1,0 +1,346 @@
+/* --- Global Styles & Reset --- */
+*{
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* --- Main Navigation Bar --- */
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; /* Sticky needs a position to stick to */
+    margin-top: 1rem;
+    padding: 0 2rem; /* Add horizontal padding for spacing */
+    gap: 1.8rem;
+    box-shadow: 0 1px 0 0 #ece4e4;
+    background-color: white; /* Add background for content scrolling underneath */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* General style for all links within the navbar */
+.navBar a{
+    text-decoration: none;
+}
+
+/* Styles for the "Pexels" logo text */
+.navBar h3{
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Container for the main navigation links (Explore, License, Join) */
+.navLinks{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+/* Styles for the individual text links in the navbar */
+.navLinks a{
+    text-decoration: none;
+    color:  black;
+    font-size: 1.2rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Styles for the "Join" call-to-action button */
+.navLinks .cta{
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1.1rem;
+    border-radius: 20px;
+}
+
+/* --- Search Bar Styles --- */
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #f0f0f0; /* Example background */
+    flex-grow: 1; /* Allows the search bar to grow and fill available space */
+    max-width: 700px; /* Optional: prevents it from becoming too wide on large screens */
+}
+
+/* Styles for the text input field within the search bar */
+.search-bar input{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    
+}
+
+.search-bar img{
+    padding-right: 1rem;
+}
+
+input::placeholder{
+    font-size: 1.2rem;
+}
+
+input:focus{
+    outline: none;
+    border: none;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other nav content */
+}
+
+.hamburger .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333; /* A dark color for visibility */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation for hamburger to "X" */
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* A separate "Join" button, hidden by default and shown on mobile */
+#nav #cta{
+    background-color: black;
+    color: white;
+    padding: 1.2rem;
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.2rem;
+    display: none;
+}
+
+/* --- Secondary Navigation / Filter Tags --- */
+.secondNav{
+    display: flex;
+    justify-content: flex-start; /* Align filter links to the left */
+    align-items: center;
+    margin-top: 4rem;
+    list-style: none;
+    gap: 1.2rem;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* Styles for the individual filter links */
+.secondNav a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 2rem; /* Consistent with .subLinks */
+    padding: 1.2rem;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-size: 1.2rem;
+    border: 0.01px solid rgb(228, 221, 221);
+    cursor: pointer;
+}
+
+/* Hover effect for the filter links */
+.secondNav a:hover{
+    background-color: rgb(253, 249, 249);
+}
+
+/* --- Main Content Section --- */
+.main-content {
+    max-width: 1280px; /* Use a max-width container for the main content */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 2rem; /* Add some side padding */
+}
+
+
+/* Styles for the main page heading (e.g., "Luxury Pictures") */
+.header{
+    margin-top: 3rem;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-size: 2rem;
+    /* Removed flex centering to align left within its container */
+}
+
+/* Container for the sub-navigation links (Photos, Videos, Users) */
+.subLinks{
+   display: flex;
+   gap: 1.5rem;
+   align-items: center;
+   justify-content: flex-start; /* Align sub-links to the left */
+   margin-top: 1rem;
+}
+
+/* Styles for the individual sub-navigation links */
+.subLinks a{
+    text-decoration: none;
+    text-align: center;
+    background-color: white;
+    border: solid 1px black;
+    color: black;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 2rem;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-size: 1.2rem;   
+}
+
+/* Hover effect for the sub-navigation links */
+.subLinks a:hover{
+    background-color: black;
+    cursor:pointer;
+    color: white;
+    transition: 0.4s ease all;
+}
+
+/* Container for the image grid. */
+.gridContainer{
+    /* Using CSS Grid for a structured layout */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    gap: 1rem; /* Space between all grid items */
+    padding-top: 1rem;
+}
+
+/* Style for each item inside the grid container */
+.gridContainer > div {
+    background-color: #f9f9f9; /* Example background */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    min-height: 200px; /* A standard height for items in columns 1 & 2 */
+    overflow: hidden; /* Ensures the image respects the container's border-radius */
+}
+
+.gridContainer img{
+    width: 100%;
+    height: 100%; /* Make the image fill the container's height */
+    object-fit: cover; /* Crop the image to fit without distortion */
+    display: block; /* Removes any extra space below the image */
+}
+
+
+
+/* ==========================================================================
+   Responsive Styles for Mobile & Tablet (screens 768px wide or smaller)
+   ========================================================================== */
+@media(max-width: 768px){
+    /* Show the hamburger icon on smaller screens */
+    .hamburger{
+        display: block;
+    }
+
+    /* Adjust navbar spacing for mobile */
+    .navBar{
+        display: flex;
+        justify-content: space-around;
+    }
+   
+    /* Show the mobile-specific "Join" button */
+    #nav #cta{
+        display: block;
+        padding-right:  1.1rem;
+        padding-left: 1.1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    /* --- Fullscreen Mobile Menu Overlay --- */
+    .navLinks {
+        /* --- Fullscreen Menu Styles --- */
+        position: fixed; /* Position relative to the viewport */
+        top: 0;
+        left: 0;
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+        z-index: 1000; /* Sit just below the hamburger icon but above page content */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center links vertically */
+        align-items: center; /* Center links horizontally */
+        gap: 3rem; /* Increase space between links */
+
+        background-color: white; /* Solid background for the overlay */
+
+        /* Hide menu by default */
+        opacity: 0;
+        transform: translateY(-100%);
+        pointer-events: none; /* Prevent clicks on the hidden menu */
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+    
+    /* Hide the desktop search bar and the original "Join" button on mobile */
+    .search-bar,
+    .navLinks .cta {
+        display: none;
+    }
+
+    /* This class is toggled by JavaScript to show the menu */
+    .navLinks.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto; /* Allow clicks when the menu is active */
+    }
+
+    /* Make links larger for the fullscreen view */
+    .navLinks a {
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 0.5rem 2rem; /* Add padding to create a button-like area */
+        border-radius: 50px; /* Make the hover background pill-shaped */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+    }
+
+    /* Hover effect for links in the fullscreen menu */
+    .navLinks a:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Hide the secondary navigation/filters on mobile */
+    .secondNav{
+        display: none;
+    }
+
+    /* Reduce side padding for the main content on smaller screens */
+    .main-content {
+        padding: 0 1rem; /* Reduce padding on smaller screens */
+    }
+
+    /* Adjust column count for smaller screens */
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+
+    /* Reset the special height for the 3rd column item when in a 2-column layout */
+    .gridContainer > div:nth-child(3n) {
+        min-height: 200px; /* Revert to the default height */
+    }
+}
+

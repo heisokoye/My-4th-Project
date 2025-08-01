@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pexels</title>
+    <!-- Link to the new, separated CSS files -->
+    <link rel="stylesheet" href="trial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lavishly+Yours&family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lavishly+Yours&family=Playwrite+AU+QLD:wght@100..400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navBar" id="nav">
+        <a href="#" class="logo"><h3>Pexels</h3></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for an image here" name="" id="">
+            <img src="search.png" alt="">
+        </div>
+        <ul class="navLinks">
+            <li><a href="#"> Explore</a></li>
+            <li><a href="#">License</a></li>
+            <li><a href="#" class="cta">Join</a></li>
+        </ul>  
+        <a href="#" id="cta">Join</a>
+
+        <div class="hamburger">
+            <span class="bar"></span>       
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="secondNav">
+            <a href="#">Filter</a>
+            <a href="#">luxry car</a>
+            <a href="#">suit</a>
+            <a href="#">happy</a>
+            <a href="##">watch</a>
+            <a href="#">work</a>
+            <a href="#">shopping</a>
+            <a href="#">jewelry</a>
+            <a href="#">hotel</a>
+            <a href="#">luxry lifestyle</a>
+            <a href="#"> luxurious</a>
+            
+        </div>
+
+        <section>
+            <div class="header"> <h2>Luxury Pictures</h2> </div>
+            <div class="subLinks">
+                    <a href="#" class="active">Photos</a> 
+                    <a href="#">Videos</a>
+                    <a href="#">Users</a>
+            </div>
+
+            
+        </section>
+
+        <div class="gridContainer">
+            <div><img src="water.jpg" alt="A scenic view of water"></div>
+            <div><img src="water.jpg" alt="A scenic view of water"></div>
+            <div><img src="water.jpg" alt="A scenic view of water"></div>
+            <div><img src="water.jpg" alt="A scenic view of water"></div>
+            <div><img src="water.jpg" alt="A scenic view of water"></div>
+            <div><img src="water.jpg" alt="A scenic view of water"></div>
+            <div><img src="water.jpg" alt="A scenic view of water"></div>
+            <div><img src="water.jpg" alt="A scenic view of water"></div>
+            <div><img src="water.jpg" alt="A scenic view of water"></div>
+        </div>
+    </main>
+
+
+    <script>
+        // Select the hamburger and the navigation links menu
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".navLinks");
+    
+        // Add a click event listener to the hamburger icon
+        hamburger.addEventListener("click", () => {
+            // When clicked, toggle the "active" class on both the hamburger and the nav links
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+    </script>
+
+</body>
